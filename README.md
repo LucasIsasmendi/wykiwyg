@@ -1,0 +1,2 @@
+# seonose
+aprendizaje mediante gamificación
