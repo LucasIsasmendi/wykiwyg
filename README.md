@@ -1,4 +1,4 @@
-# What You Know Is What You Get (WYKIWYG)
+# When You Know Is When you Gain (WYKIWYG)
 Learning by Gamification
 
 # Tech
