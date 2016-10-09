@@ -1,0 +1,61 @@
+{
+  "name": "wykiwyg",
+  "version": "0.0.1",
+  "codename": "veni-jugate-ya",
+  "description": "trivia game - initial version",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "echo  \"Pending: generate source code docs\" && exit 1",
+    "api-docs": "echo  \"Pending: generate api docs\" && exit 1"
+  },
+  "engines": {
+    "node": "6.7.0",
+    "npm": "3.10.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasIsasmendi/wykiwyg.git"
+  },
+  "keywords": [
+    "trivia",
+    "gamification",
+    "social"
+  ],
+  "author": "Lucas Isasmendi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LucasIsasmendi/wykiwyg/issues"
+  },
+  "homepage": "https://github.com/LucasIsasmendi/wykiwyg#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "crypto": "0.0.3",
+    "errorhandler": "^1.4.3",
+    "express": "^4.14.0",
+    "express-session": "^1.14.1",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "https": "^1.0.0",
+    "jsonwebtoken": "^7.1.9",
+    "jwt-simple": "^0.5.0",
+    "md5": "^2.2.1",
+    "method-override": "^2.3.6",
+    "moment": "^2.15.1",
+    "mongodb": "^2.2.10",
+    "morgan": "^1.7.0",
+    "multer": "^1.2.0",
+    "node-rest-client": "^2.0.1",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
+    "path": "^0.12.7",
+    "phpjs": "^1.3.2",
+    "querystring": "^0.2.0",
+    "request": "^2.75.0",
+    "serve-favicon": "^2.3.0",
+    "underscore": "^1.8.3",
+    "util": "^0.10.3"
+  }
+}
