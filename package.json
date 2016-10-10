@@ -2,13 +2,17 @@
   "name": "wykiwyg",
   "version": "0.0.1",
   "codename": "veni-jugate-ya",
-  "description": "trivia game - initial version",
-  "main": "server/server.js",
+  "description": "when you know is when you gain",
+  "main": "server/index.js",
   "scripts": {
-    "start": "node server/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "docs": "echo  \"Pending: generate source code docs\" && exit 1",
-    "api-docs": "echo  \"Pending: generate api docs\" && exit 1"
+    "prestart": "npm run apidoc",
+    "start": "nodemon server/index.js --exec babel-node --presets es2015",
+    "test:be": "mocha server/test -u bdd -R spec",
+    "pretest:be": "echo \"WARNING! check database..\"",
+    "posttest:be": "echo 'the test has been run!'",
+    "lint:be": "jshint server/*.js server/**/*.js",
+    "docs": "echo  \"Pending: generate source code docs with dox or jsdoc\" && exit 1",
+    "apidoc": "apidoc -i server/routes/ -o public/apidoc"
   },
   "engines": {
     "node": "6.7.0",
@@ -30,8 +34,11 @@
   },
   "homepage": "https://github.com/LucasIsasmendi/wykiwyg#readme",
   "dependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
     "body-parser": "^1.15.2",
     "compression": "^1.6.2",
+    "cors": "^2.8.1",
     "crypto": "0.0.3",
     "errorhandler": "^1.4.3",
     "express": "^4.14.0",
@@ -57,5 +64,14 @@
     "serve-favicon": "^2.3.0",
     "underscore": "^1.8.3",
     "util": "^0.10.3"
+  },
+  "devDependencies": {
+    "apidoc": "^0.16.1",
+    "babel-register": "^6.16.3",
+    "jshint": "^2.9.3",
+    "mocha": "^3.1.0",
+    "nodemon": "^1.11.0",
+    "should": "^11.1.0",
+    "supertest": "^2.0.0"
   }
 }
