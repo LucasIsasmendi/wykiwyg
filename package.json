@@ -5,15 +5,22 @@
   "description": "when you know is when you gain",
   "main": "server/index.js",
   "scripts": {
-    "prestart": "npm run apidoc",
-    "start": "nodemon server/index.js --exec babel-node --presets es2015",
-    "test:be": "mocha server/test -u bdd -R spec",
+    "start": "babel-node server/index.js",
+    "prestart:dev": "npm run apidoc && npm run lint:be",
+    "start:dev": "npm run test:be && nodemon server/index.js --exec babel-node --presets es2015",
     "pretest:be": "echo \"WARNING! check database..\"",
+    "test:be": "mocha server/test -u bdd -R spec",
     "posttest:be": "echo 'the test has been run!'",
     "lint:be": "jshint server/*.js server/**/*.js",
     "docs": "echo  \"Pending: generate source code docs with dox or jsdoc\" && exit 1",
     "apidoc": "apidoc -i server/routes/ -o public/apidoc"
   },
+  "apidoc": {
+    "name": "WYKIWYG API - Documentation",
+    "template": {
+      "forceLanguage": "en"
+    }
+  },  
   "engines": {
     "node": "6.7.0",
     "npm": "3.10.3"
@@ -43,9 +50,11 @@
     "errorhandler": "^1.4.3",
     "express": "^4.14.0",
     "express-session": "^1.14.1",
+    "express-validation": "^1.0.1",
     "fs": "0.0.1-security",
     "http": "0.0.0",
     "https": "^1.0.0",
+    "joi": "^9.1.0",
     "jsonwebtoken": "^7.1.9",
     "jwt-simple": "^0.5.0",
     "md5": "^2.2.1",
