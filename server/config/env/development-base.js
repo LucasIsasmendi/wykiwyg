@@ -10,5 +10,10 @@ export default {
 		port: process.env.MONGO_PORT || 2701,
 		db: process.env.MONGO_DB || 'wykiwyg'
 	}
-	tokensecret: process.env.TOKEN_SECRET || 'Your-Secret'
+	tokensecret: process.env.TOKEN_SECRET || 'Your-Secret',
+	paths: {
+		views:'../client/www',
+		favicon:'../client/www/favicon.png',
+		static:'../client'
+	}
 }
