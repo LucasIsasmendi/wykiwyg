@@ -1,9 +1,9 @@
 export default {
 	env: 'development',
 	fb:{
-		clientID: 'Your-Facebook-Client-Id',
-		clientSecret: 'Your-Facebook-Client-Secret',
-		callback: 'callback-URL like domain/auth/facebook/callback'
+		clientID: process.env.FBID ||  'Your-Facebook-Client-Id',
+		clientSecret: process.env.FBSECRET || 'Your-Facebook-Client-Secret',
+		callback: process.env.FBCBURL || 'http://localhost:3000/auth/facebook/callback'
 	},
 	mongo:{
 		uri: process.env.MONGO_URI || 'localhost',
