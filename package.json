@@ -20,7 +20,7 @@
     "template": {
       "forceLanguage": "en"
     }
-  },  
+  },
   "engines": {
     "node": "6.7.0",
     "npm": "3.10.3"
@@ -62,7 +62,6 @@
     "moment": "^2.15.1",
     "mongodb": "^2.2.10",
     "morgan": "^1.7.0",
-    "multer": "^1.2.0",
     "node-rest-client": "^2.0.1",
     "passport": "^0.3.2",
     "passport-facebook": "^2.1.1",
