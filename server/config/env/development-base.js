@@ -9,11 +9,13 @@ export default {
 		uri: process.env.MONGO_URI || 'localhost',
 		port: process.env.MONGO_PORT || 2701,
 		db: process.env.MONGO_DB || 'wykiwyg'
-	}
+	},
 	tokensecret: process.env.TOKEN_SECRET || 'Your-Secret',
 	paths: {
 		views:'../client/www',
-		favicon:'../client/www/favicon.png',
+		favicon:'../client/www/favicon.ico',
 		static:'../client'
-	}
+	},
+	port: process.env.PORT || 3301,
+	sslport: process.env.SSLPORT || 4301
 }
